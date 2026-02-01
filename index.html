@@ -148,11 +148,17 @@
             background: var(--light);
         }
         .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            display: flex;
+            flex-wrap: nowrap;           /* una sola fila horizontal */
+            overflow-x: auto;            /* deslizable si hay muchas fotos */
             gap: 1.5rem;
+            padding: 1rem 0;
+            scroll-snap-type: x mandatory;
         }
         .gallery-item {
+            flex: 0 0 auto;
+            width: 300px;                /* ancho fijo por foto - puedes cambiar a 250px o 350px */
+            scroll-snap-align: center;
             cursor: pointer;
         }
         .gallery-item img {
@@ -167,7 +173,7 @@
             transform: scale(1.05);
         }
 
-        /* Lightbox CSS puro */
+        /* Lightbox CSS puro - sin cambios */
         .lightbox {
             display: none;
             position: fixed;
@@ -243,6 +249,7 @@
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.8rem; }
             nav ul { gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
+            .gallery-item { width: 250px; } /* más pequeño en móvil */
         }
     </style>
 </head>
