@@ -144,20 +144,47 @@
             font-weight: 600;
             margin: 1rem 0;
         }
+        .combo-card {
+            background: linear-gradient(135deg, var(--primary) 0%, #b08f4e 100%);
+            color: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(201,169,110,0.4);
+            max-width: 600px;
+            margin: 0 auto 60px;
+        }
+        .combo-card img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        .combo-content {
+            padding: 2.5rem;
+            text-align: center;
+        }
+        .combo-price {
+            font-size: 2.8rem;
+            margin: 1rem 0;
+            font-weight: bold;
+        }
+        .combo-save {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+        }
         #galeria {
             background: var(--light);
         }
         .gallery-grid {
             display: flex;
-            flex-wrap: nowrap;           /* una sola fila horizontal */
-            overflow-x: auto;            /* deslizable si hay muchas fotos */
+            flex-wrap: nowrap;
+            overflow-x: auto;
             gap: 1.5rem;
             padding: 1rem 0;
             scroll-snap-type: x mandatory;
         }
         .gallery-item {
             flex: 0 0 auto;
-            width: 300px;                /* ancho fijo por foto - puedes cambiar a 250px o 350px */
+            width: 300px;
             scroll-snap-align: center;
             cursor: pointer;
         }
@@ -172,8 +199,6 @@
         .gallery-item img:hover {
             transform: scale(1.05);
         }
-
-        /* Lightbox CSS puro - sin cambios */
         .lightbox {
             display: none;
             position: fixed;
@@ -214,7 +239,6 @@
         .close-btn:hover {
             color: var(--primary);
         }
-
         #about {
             background: var(--light);
             text-align: center;
@@ -249,7 +273,8 @@
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.8rem; }
             nav ul { gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
-            .gallery-item { width: 250px; } /* más pequeño en móvil */
+            .gallery-item { width: 250px; }
+            .combo-card { margin: 0 8% 60px; }
         }
     </style>
 </head>
@@ -262,6 +287,7 @@
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#pulseras">Pulseras</a></li>
                 <li><a href="#cadenas">Cadenas</a></li>
+                <li><a href="#combo">Combo</a></li>
                 <li><a href="#galeria">Galería</a></li>
                 <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
                 <li><a href="#beneficios">Beneficios</a></li>
@@ -283,7 +309,7 @@
                 <div class="card-content">
                     <h3>Pulsera Turbillon Acero Inoxidable</h3>
                     <p>Diseño trenzado clásico, resistente y elegante. Perfecta para el día a día.</p>
-                    <div class="price">$15.000 CLP</div>
+                    <div class="price">$18.900 CLP</div>
                     <a href="https://www.instagram.com/royaljoyas02" class="btn-primary" target="_blank">Comprar en Instagram</a>
                 </div>
             </div>
@@ -298,9 +324,23 @@
                 <div class="card-content">
                     <h3>Cadena Turbillon Acero Inoxidable</h3>
                     <p>Trenza robusta y refinada. El complemento ideal para elevar tu estilo.</p>
-                    <div class="price">$20.000 CLP</div>
+                    <div class="price">$24.900 CLP</div>
                     <a href="https://www.instagram.com/royaljoyas02" class="btn-primary" target="_blank">Comprar en Instagram</a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="combo">
+        <h2 class="section-title">Combo Recomendado</h2>
+        <div class="combo-card">
+            <img src="images/pulsera-agua.jpg" alt="Combo Pulsera + Cadena Turbillon">
+            <div class="combo-content">
+                <h3>Conjunto Pulsera + Cadena Turbillon</h3>
+                <p>Lo mejor de ambos mundos: pulsera y cadena a juego, perfectos para uso diario o como regalo.</p>
+                <div class="combo-price">$39.900 CLP</div>
+                <div class="combo-save">¡Ahorras $3.900 vs. comprar por separado! (Envío gratis incluido)</div>
+                <a href="https://www.instagram.com/royaljoyas02" class="btn-primary" target="_blank">Comprar Combo en Instagram</a>
             </div>
         </div>
     </section>
