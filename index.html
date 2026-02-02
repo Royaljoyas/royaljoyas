@@ -113,6 +113,13 @@
             padding: 120px 5%;
         }
 
+        .section-title {
+            text-align: center;
+            font-size: 4rem;
+            margin-bottom: 3rem;
+            color: var(--gold);
+        }
+
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
@@ -126,6 +133,7 @@
             overflow: hidden;
             transition: transform 0.4s, box-shadow 0.4s;
             position: relative;
+            border: 1px solid var(--gold-light);
         }
 
         .product-card:hover {
@@ -164,6 +172,7 @@
             text-align: center;
             position: relative;
             overflow: hidden;
+            border: 2px solid var(--gold);
         }
 
         .combo-card::before {
@@ -196,6 +205,33 @@
             border-radius: 50px;
             font-size: 1.1rem;
             font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .benefit-item {
+            background: var(--gray);
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid var(--gold-light);
+            transition: all 0.3s;
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
+        }
+
+        .benefit-item i {
+            font-size: 3.5rem;
+            color: var(--gold);
             margin-bottom: 1rem;
         }
 
@@ -238,6 +274,7 @@
         @media (max-width: 768px) {
             .hero h1 { font-size: 3.5rem; }
             .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .combo-card { margin: 0 8% 60px; }
         }
     </style>
 </head>
@@ -258,7 +295,7 @@
     <section class="hero" id="inicio">
         <div class="hero-content">
             <h1>Royal Joyas</h1>
-            <p>Elegancia atemporal en acero inoxidable premium. Diseños turbillon que combinan fuerza, estilo y durabilidad para el uso diario.</p>
+            <p>Elegancia atemporal en acero inoxidable 316L premium. Hipoalergénicas, resistentes al agua y al uso diario. Diseños turbillon que brillan para siempre.</p>
             <a href="https://www.instagram.com/royaljoyas02" class="cta-button" target="_blank">Explorar Colección</a>
         </div>
     </section>
@@ -272,7 +309,7 @@
                 <img src="images/pulsera-agua.jpg" alt="Pulsera Turbillon">
                 <div class="product-info">
                     <h3>Pulsera Turbillon</h3>
-                    <p>Acero inoxidable 316L • Resistente al agua • Hipoalergénica</p>
+                    <p>Acero inoxidable 316L • Hipoalergénica • Resistente al agua</p>
                     <div class="price">$18.900 CLP</div>
                     <a href="https://www.instagram.com/royaljoyas02" class="btn-primary" target="_blank">Comprar ahora</a>
                 </div>
@@ -283,7 +320,7 @@
                 <img src="images/cadena.jpg" alt="Cadena Turbillon">
                 <div class="product-info">
                     <h3>Cadena Turbillon</h3>
-                    <p>Acero inoxidable 316L • Diseño premium • Uso diario</p>
+                    <p>Acero inoxidable 316L • Diseño premium • Hipoalergénica</p>
                     <div class="price">$24.900 CLP</div>
                     <a href="https://www.instagram.com/royaljoyas02" class="btn-primary" target="_blank">Comprar ahora</a>
                 </div>
@@ -295,11 +332,37 @@
                 <div class="combo-content">
                     <div class="save-badge">¡MEJOR VALOR!</div>
                     <h3>Combo Pulsera + Cadena Turbillon</h3>
-                    <p>Perfecto para uso diario o regalo especial</p>
+                    <p>Lo mejor de ambos mundos: pulsera y cadena a juego, hipoalergénicas y resistentes al uso diario</p>
                     <div class="combo-price">$39.900 CLP</div>
                     <p><strong>Ahorras $3.900</strong> • Envío gratis</p>
                     <a href="https://www.instagram.com/royaljoyas02" class="btn-primary" target="_blank">Comprar Combo</a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="beneficios">
+        <h2 class="section-title">¿Por qué elegir Royal Joyas?</h2>
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <i>💧</i>
+                <h3>Resistente al Agua</h3>
+                <p>Usa en ducha, piscina o playa sin daños. El acero 316L mantiene su brillo intacto.</p>
+            </div>
+            <div class="benefit-item">
+                <i>🛡️</i>
+                <h3>Hipoalergénica</h3>
+                <p>Material quirúrgico 316L libre de níquel. Ideal para pieles sensibles, sin irritaciones.</p>
+            </div>
+            <div class="benefit-item">
+                <i>🌟</i>
+                <h3>Uso Diario Perfecto</h3>
+                <p>Resiste sudor, calor y roces constantes. Brillo eterno y diseño que no pasa de moda.</p>
+            </div>
+            <div class="benefit-item">
+                <i>🔗</i>
+                <h3>Durabilidad Extrema</h3>
+                <p>No se oxida, no se pone negro. Piezas hechas para durar años.</p>
             </div>
         </div>
     </section>
@@ -317,7 +380,7 @@
     <section id="sobre">
         <h2 class="section-title">Sobre Royal Joyas</h2>
         <div style="max-width: 900px; margin: 0 auto; text-align: center;">
-            <p>Creemos en la belleza que dura. Todas nuestras piezas están hechas en acero inoxidable 316L de grado médico: resistente al agua, al sudor, a la corrosión y hipoalergénicas.</p>
+            <p>Creemos en la belleza que dura. Todas nuestras piezas están hechas en acero inoxidable 316L de grado médico: hipoalergénicas, resistentes al agua, al sudor, a la corrosión y con brillo eterno.</p>
             <p>El diseño turbillon combina fuerza y elegancia, perfecto para el uso diario sin sacrificar estilo.</p>
         </div>
     </section>
