@@ -3,31 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Royal Joyas - Acero Inoxidable Premium | Pulseras y Cadenas Turbillon</title>
+    <title>Royal Joyas - Acero Inoxidable Premium</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #c9a96e;
-            --dark: #1a1a1a;
-            --gray-dark: #333;
-            --gray: #666;
+            --primary: #d4af37;
+            --dark: #0a0a0a;
+            --gray: #111111;
             --light: #f8f8f8;
             --white: #ffffff;
         }
         body {
             margin: 0;
             font-family: 'Montserrat', sans-serif;
-            background-color: var(--white);
-            color: var(--gray-dark);
+            background-color: var(--dark);
+            color: #ddd;
             line-height: 1.7;
         }
         h1, h2, h3 {
             font-family: 'Cinzel', serif;
-            color: var(--dark);
-            font-weight: 700;
+            color: var(--primary);
         }
         header {
-            background: var(--white);
+            background: rgba(0,0,0,0.9);
             padding: 1.2rem 8%;
             display: flex;
             justify-content: space-between;
@@ -36,11 +34,10 @@
             width: 100%;
             top: 0;
             z-index: 100;
-            border-bottom: 1px solid var(--light);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-bottom: 1px solid var(--primary);
         }
         .logo-img {
-            height: 60px;
+            height: 70px;
         }
         nav ul {
             list-style: none;
@@ -50,7 +47,7 @@
             padding: 0;
         }
         nav a {
-            color: var(--gray-dark);
+            color: #ddd;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
@@ -59,77 +56,75 @@
             color: var(--primary);
         }
         .hero {
-            padding: 180px 8% 120px;
+            height: 100vh;
+            min-height: 700px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('images/pulsera-agua.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('images/pulsera-agua.jpg') center/cover no-repeat;
-            color: var(--dark);
         }
         .hero h1 {
-            font-size: 4rem;
+            font-size: 6rem;
             margin-bottom: 1rem;
-            letter-spacing: 2px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.8);
         }
         .tagline {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             max-width: 800px;
             margin: 0 auto 2rem;
-            font-weight: 300;
         }
         .btn-primary {
             background: var(--primary);
-            color: var(--dark);
+            color: #000;
             padding: 1rem 2.5rem;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            display: inline-block;
+            font-weight: 700;
+            transition: all 0.4s;
         }
         .btn-primary:hover {
-            background: #b08f4e;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(201,169,110,0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(212,175,55,0.5);
         }
         section {
             padding: 100px 8%;
         }
         .section-title {
             text-align: center;
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 4rem;
             position: relative;
         }
         .section-title::after {
             content: '';
-            width: 80px;
+            width: 100px;
             height: 2px;
             background: var(--primary);
             display: block;
-            margin: 1rem auto 0;
+            margin: 1.5rem auto 0;
         }
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
             gap: 3rem;
-            margin-bottom: 80px;
         }
         .product-card {
-            background: var(--white);
-            border-radius: 12px;
+            background: var(--gray);
+            border-radius: 20px;
             overflow: hidden;
-            transition: all 0.4s ease;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            border: 1px solid var(--light);
+            transition: all 0.5s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
         }
         .product-card:hover {
             transform: translateY(-15px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+            box-shadow: 0 20px 50px rgba(212,175,55,0.3);
         }
         .product-card img {
             width: 100%;
-            height: 320px;
+            height: 420px;
             object-fit: cover;
-            transition: transform 0.5s;
+            transition: transform 0.6s;
         }
         .product-card:hover img {
             transform: scale(1.08);
@@ -139,40 +134,34 @@
             text-align: center;
         }
         .price {
-            font-size: 2rem;
+            font-size: 2.4rem;
             color: var(--primary);
-            font-weight: 600;
+            font-weight: 700;
             margin: 1rem 0;
         }
         .combo-card {
-            background: linear-gradient(135deg, var(--primary) 0%, #b08f4e 100%);
-            color: white;
-            border-radius: 16px;
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #1a1a1a, #2a1e0f);
+            border-radius: 24px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(201,169,110,0.4);
-            max-width: 600px;
-            margin: 0 auto 60px;
-        }
-        .combo-card img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
+            box-shadow: 0 15px 50px rgba(212,175,55,0.3);
         }
         .combo-content {
-            padding: 2.5rem;
+            padding: 3rem;
             text-align: center;
         }
         .combo-price {
-            font-size: 2.8rem;
-            margin: 1rem 0;
-            font-weight: bold;
+            font-size: 3rem;
+            color: var(--primary);
+            margin: 1.5rem 0;
         }
         .combo-save {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
+            color: #ffcc00;
             margin-bottom: 1.5rem;
         }
         #galeria {
-            background: var(--light);
+            background: var(--dark);
         }
         .gallery-grid {
             display: flex;
@@ -180,101 +169,79 @@
             overflow-x: auto;
             gap: 1.5rem;
             padding: 1rem 0;
-            scroll-snap-type: x mandatory;
         }
         .gallery-item {
             flex: 0 0 auto;
-            width: 300px;
-            scroll-snap-align: center;
+            width: 340px;
             cursor: pointer;
         }
         .gallery-item img {
             width: 100%;
-            height: 400px;
+            height: 420px;
             object-fit: cover;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 16px;
             transition: transform 0.4s;
         }
-        .gallery-item img:hover {
-            transform: scale(1.05);
+        .gallery-item:hover img {
+            transform: scale(1.06);
         }
         .lightbox {
             display: none;
             position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.95);
             z-index: 9999;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.9);
-            padding: 40px;
-            overflow: auto;
-        }
-        .lightbox:target {
-            display: flex;
             align-items: center;
             justify-content: center;
         }
-        .lightbox-content {
-            position: relative;
-            max-width: 90%;
-            max-height: 90vh;
+        .lightbox:target {
+            display: flex;
         }
         .lightbox-content img {
-            max-width: 100%;
+            max-width: 90%;
             max-height: 90vh;
-            border-radius: 8px;
-            box-shadow: 0 0 30px rgba(0,0,0,0.8);
+            border-radius: 12px;
+            box-shadow: 0 0 40px rgba(212,175,55,0.5);
         }
         .close-btn {
             position: absolute;
-            top: -40px;
-            right: 0;
+            top: 20px;
+            right: 20px;
             color: white;
-            font-size: 40px;
+            font-size: 48px;
             text-decoration: none;
-            font-weight: bold;
         }
-        .close-btn:hover {
-            color: var(--primary);
-        }
-        #about {
-            background: var(--light);
+        #sobre-nosotros {
+            background: var(--gray);
             text-align: center;
-        }
-        #about p {
-            max-width: 800px;
-            margin: 0 auto 2rem;
-            font-size: 1.2rem;
-            color: var(--gray);
         }
         .benefits {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+        .benefit-item {
+            background: var(--dark);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid var(--primary);
             text-align: center;
         }
         .benefit-item i {
             font-size: 3.5rem;
             color: var(--primary);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
         footer {
-            background: var(--dark);
-            color: #aaa;
-            padding: 4rem 8% 2rem;
+            background: #000;
+            padding: 4rem 8%;
             text-align: center;
-        }
-        footer a {
-            color: var(--primary);
-            text-decoration: none;
+            border-top: 1px solid var(--primary);
         }
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.8rem; }
-            nav ul { gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
-            .gallery-item { width: 250px; }
-            .combo-card { margin: 0 8% 60px; }
+            .hero h1 { font-size: 3.5rem; }
+            .gallery-item { width: 280px; }
         }
     </style>
 </head>
@@ -297,7 +264,7 @@
 
     <section class="hero" id="inicio">
         <h1>Royal Joyas</h1>
-        <p class="tagline">Elegancia atemporal en acero inoxidable premium. Diseños turbillon que combinan fuerza, estilo y durabilidad para el uso diario.</p>
+        <p>Elegancia atemporal en acero inoxidable premium. Hipoalergénicas, resistentes al agua y perfectas para el uso diario.</p>
         <a href="https://www.instagram.com/royaljoyas02" class="btn-primary" target="_blank">Ver en Instagram</a>
     </section>
 
@@ -305,10 +272,10 @@
         <h2 class="section-title">Pulsera Turbillon</h2>
         <div class="products-grid">
             <div class="product-card">
-                <img src="images/pulsera-agua.jpg" alt="Pulsera Turbillon resistente al agua">
+                <img src="images/pulsera-agua.jpg" alt="Pulsera Turbillon">
                 <div class="card-content">
-                    <h3>Pulsera Turbillon Acero Inoxidable</h3>
-                    <p>Diseño trenzado clásico, resistente y elegante. Perfecta para el día a día.</p>
+                    <h3>Pulsera Turbillon</h3>
+                    <p>Acero inoxidable 316L • Hipoalergénica • Resistente al agua • Ideal para uso diario</p>
                     <div class="price">$18.900 CLP</div>
                     <a href="https://www.instagram.com/royaljoyas02" class="btn-primary" target="_blank">Comprar en Instagram</a>
                 </div>
@@ -320,10 +287,10 @@
         <h2 class="section-title">Cadena Turbillon</h2>
         <div class="products-grid">
             <div class="product-card">
-                <img src="images/cadena.jpg" alt="Cadena Turbillon">
+                <img src="images/cadena-cuello.jpg" alt="Cadena Turbillon en cuello">
                 <div class="card-content">
-                    <h3>Cadena Turbillon Acero Inoxidable</h3>
-                    <p>Trenza robusta y refinada. El complemento ideal para elevar tu estilo.</p>
+                    <h3>Cadena Turbillon</h3>
+                    <p>Acero inoxidable 316L • Diseño robusto • Hipoalergénica • Brillo duradero</p>
                     <div class="price">$24.900 CLP</div>
                     <a href="https://www.instagram.com/royaljoyas02" class="btn-primary" target="_blank">Comprar en Instagram</a>
                 </div>
@@ -332,15 +299,16 @@
     </section>
 
     <section id="combo">
-        <h2 class="section-title">Combo Recomendado</h2>
-        <div class="combo-card">
-            <img src="images/pulsera-agua.jpg" alt="Combo Pulsera + Cadena Turbillon">
-            <div class="combo-content">
-                <h3>Conjunto Pulsera + Cadena Turbillon</h3>
-                <p>Lo mejor de ambos mundos: pulsera y cadena a juego, perfectos para uso diario o como regalo.</p>
-                <div class="combo-price">$39.900 CLP</div>
-                <div class="combo-save">¡Ahorras $3.900 vs. comprar por separado! (Envío gratis incluido)</div>
-                <a href="https://www.instagram.com/royaljoyas02" class="btn-primary" target="_blank">Comprar Combo en Instagram</a>
+        <h2 class="section-title">Pack Recomendado</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="images/pack-pulsera-cadena.jpg" alt="Pack Pulsera + Cadena">
+                <div class="card-content">
+                    <h3>Pack Pulsera + Cadena Turbillon</h3>
+                    <p>El conjunto perfecto • Ahorras $3.900 • Envío gratis incluido</p>
+                    <div class="price">$39.900 CLP</div>
+                    <a href="https://www.instagram.com/royaljoyas02" class="btn-primary" target="_blank">Comprar Pack</a>
+                </div>
             </div>
         </div>
     </section>
@@ -350,85 +318,99 @@
         <div class="gallery-grid">
             <div class="gallery-item">
                 <a href="#lb1">
-                    <img src="images/pulsera-agua.jpg" alt="Pulsera Turbillon en agua">
+                    <img src="images/pulsera-agua.jpg" alt="Pulsera en agua">
                 </a>
             </div>
             <div class="gallery-item">
                 <a href="#lb2">
-                    <img src="images/pulsera-madera.jpg" alt="Pulsera Turbillon sobre madera">
+                    <img src="images/pulsera-madera.jpg" alt="Pulsera sobre madera">
                 </a>
             </div>
             <div class="gallery-item">
                 <a href="#lb3">
-                    <img src="images/pulsera-blanca.jpg" alt="Pulsera Turbillon minimalista">
+                    <img src="images/pulsera-blanca.jpg" alt="Pulsera minimalista">
                 </a>
             </div>
             <div class="gallery-item">
                 <a href="#lb4">
-                    <img src="images/cadena.jpg" alt="Cadena Turbillon">
+                    <img src="images/cadena-cuello.jpg" alt="Cadena Turbillon">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="#lb5">
+                    <img src="images/pack-pulsera-cadena.jpg" alt="Pack Pulsera + Cadena">
                 </a>
             </div>
         </div>
 
-        <!-- Lightbox overlays -->
+        <!-- Lightbox -->
         <a href="#" class="lightbox" id="lb1">
             <div class="lightbox-content">
-                <a href="#" class="close-btn">&times;</a>
-                <img src="images/pulsera-agua.jpg" alt="Pulsera Turbillon en agua grande">
+                <a href="#" class="close-btn">×</a>
+                <img src="images/pulsera-agua.jpg" alt="Pulsera grande">
             </div>
         </a>
         <a href="#" class="lightbox" id="lb2">
             <div class="lightbox-content">
-                <a href="#" class="close-btn">&times;</a>
-                <img src="images/pulsera-madera.jpg" alt="Pulsera Turbillon sobre madera grande">
+                <a href="#" class="close-btn">×</a>
+                <img src="images/pulsera-madera.jpg" alt="Pulsera grande">
             </div>
         </a>
         <a href="#" class="lightbox" id="lb3">
             <div class="lightbox-content">
-                <a href="#" class="close-btn">&times;</a>
-                <img src="images/pulsera-blanca.jpg" alt="Pulsera Turbillon minimalista grande">
+                <a href="#" class="close-btn">×</a>
+                <img src="images/pulsera-blanca.jpg" alt="Pulsera grande">
             </div>
         </a>
         <a href="#" class="lightbox" id="lb4">
             <div class="lightbox-content">
-                <a href="#" class="close-btn">&times;</a>
-                <img src="images/cadena.jpg" alt="Cadena Turbillon grande">
+                <a href="#" class="close-btn">×</a>
+                <img src="images/cadena-cuello.jpg" alt="Cadena grande">
+            </div>
+        </a>
+        <a href="#" class="lightbox" id="lb5">
+            <div class="lightbox-content">
+                <a href="#" class="close-btn">×</a>
+                <img src="images/pack-pulsera-cadena.jpg" alt="Pack grande">
             </div>
         </a>
     </section>
 
-    <section id="sobre-nosotros" style="background: var(--light);">
+    <section id="sobre-nosotros">
         <h2 class="section-title">Sobre Royal Joyas</h2>
-        <p>Royal Joyas nace con la visión de ofrecer joyería accesible pero de calidad premium. Nuestras piezas en acero inoxidable 316L son diseñadas para resistir el paso del tiempo y el uso diario, sin sacrificar estilo ni elegancia.</p>
-        <p>Cada pulsera y cadena turbillon es elaborada con atención al detalle: hipoalergénicas, resistentes al agua, al sudor y a la corrosión. Inspirados en la sofisticación minimalista, creamos accesorios que impulsan tu imagen y duran para siempre.</p>
-        <p>Únete a quienes eligen calidad real sobre tendencias pasajeras. Royal Joyas: Eleva tu estilo con confianza.</p>
+        <p>Royal Joyas ofrece piezas en acero inoxidable 316L de alta calidad: <strong>hipoalergénicas</strong>, resistentes al agua, al sudor y a la corrosión. Diseñadas para brillar y durar en el uso diario.</p>
     </section>
 
     <section id="beneficios">
-        <h2 class="section-title">¿Por qué elegir Royal Joyas?</h2>
-        <div class="benefits">
+        <h2 class="section-title">Beneficios</h2>
+        <div class="benefits-grid">
             <div class="benefit-item">
                 <i>💧</i>
                 <h3>Resistente al Agua</h3>
-                <p>Usa en ducha, piscina o playa sin daños. El acero inoxidable mantiene su brillo intacto.</p>
+                <p>Perfecta para ducha, piscina o playa sin perder brillo.</p>
             </div>
             <div class="benefit-item">
                 <i>🛡️</i>
                 <h3>Hipoalergénica</h3>
-                <p>Material 316L premium, libre de níquel. Ideal para pieles sensibles, sin irritaciones.</p>
+                <p>Acero 316L libre de níquel • Ideal para pieles sensibles.</p>
             </div>
             <div class="benefit-item">
                 <i>🌟</i>
-                <h3>Uso Diario Perfecto</h3>
-                <p>Resiste sudor, calor y roces constantes. Brillo duradero y diseño que no pasa de moda.</p>
+                <h3>Brillo Duradero</h3>
+                <p>No se oxida ni se pone negro con el tiempo.</p>
+            </div>
+            <div class="benefit-item">
+                <i>⚖️</i>
+                <h3>Uso Diario</h3>
+                <p>Resiste sudor, calor y roces constantes.</p>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Royal Joyas. Joyería en acero inoxidable premium – Hecha para durar.</p>
-        <p>Visítanos en Instagram: <a href="https://www.instagram.com/royaljoyas02" target="_blank">@royaljoyas02</a></p>
+        <p>© 2026 Royal Joyas • Joyería en acero inoxidable premium</p>
+        <p>Instagram: <a href="https://www.instagram.com/royaljoyas02" target="_blank">@royaljoyas02</a></p>
     </footer>
 
 </body>
-</html
+</html>
